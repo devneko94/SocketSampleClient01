@@ -81,7 +81,7 @@ namespace SocketSampleClient01
         /// <summary>
         /// TcpClientオブジェクト
         /// </summary>
-        private TcpClient _tcp;
+        private TcpClient _tcpClient;
 
         /// <summary>
         /// ホスト名
@@ -144,7 +144,7 @@ namespace SocketSampleClient01
         {
             try
             {
-                _tcp = new TcpClient(hostName, portNum);
+                _tcpClient = new TcpClient(hostName, portNum);
                 return true;
             }
             catch (Exception e)
@@ -159,7 +159,7 @@ namespace SocketSampleClient01
         /// </summary>
         private void CloseTcpClient()
         {
-            _tcp?.Close();
+            _tcpClient?.Close();
         }
 
         /// <summary>
@@ -171,7 +171,7 @@ namespace SocketSampleClient01
         {
             string recieveMsg = string.Empty;
 
-            using (NetworkStream ns = _tcp.GetStream())
+            using (NetworkStream ns = _tcpClient.GetStream())
             {
                 ns.ReadTimeout = 1000;
                 ns.WriteTimeout = 1000;
