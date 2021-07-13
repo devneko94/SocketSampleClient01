@@ -101,7 +101,7 @@ namespace SocketSampleClient01
         /// <summary>
         /// 受信テキスト
         /// </summary>
-        private string _recieveText = "（受信内容）\r\n";
+        private string _recieveText = string.Empty;
 
         /// <summary>
         /// プロパティ変更通知イベント
