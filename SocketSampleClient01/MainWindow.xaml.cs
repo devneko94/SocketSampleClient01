@@ -81,12 +81,12 @@ namespace SocketSampleClient01
         /// <summary>
         /// TcpClientオブジェクト
         /// </summary>
-        private TcpClient _tcpClient;
+        private TcpClient _tcpClient = null;
 
         /// <summary>
         /// ホスト名
         /// </summary>
-        private string _targetHostName;
+        private string _targetHostName = string.Empty;
 
         /// <summary>
         /// ポート番号
